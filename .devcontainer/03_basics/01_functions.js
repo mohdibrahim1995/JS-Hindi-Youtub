@@ -52,7 +52,7 @@ function arryfunctiontest(testprop){
     return testprop[1]
 }
 
-console.log(arryfunctiontest(arryfunction));
+//console.log(arryfunctiontest(arryfunction));
 
 
 
