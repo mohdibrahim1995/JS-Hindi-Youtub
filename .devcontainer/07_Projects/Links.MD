@@ -44,7 +44,7 @@ btnHolds.forEach(function (button) {
 ```
 
 # Project2 BMI Calculator
-##project code
+## project code
 (click Here)[https://github.com/mohdibrahim1995/JS-Hindi-Youtub/blob/main/.devcontainer/07_Projects/Links.MD]
 
 
