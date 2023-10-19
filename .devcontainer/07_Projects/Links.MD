@@ -8,7 +8,7 @@
 ## Project 1
 
 ```javascript
-    const btnHolds = document.querySelectorAll('.button');
+const btnHolds = document.querySelectorAll('.button');
 const body = document.querySelector('body');
 
 for (let i = 0; i < btnHolds.length; i++) {
