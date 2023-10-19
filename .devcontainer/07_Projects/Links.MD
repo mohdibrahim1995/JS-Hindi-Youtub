@@ -77,7 +77,17 @@ forms.addEventListener('submit', function (e) {
   }
 });
 
-
-
 ```
 
+# Project 3
+## GetTime 
+```javascript
+//const test = document.getElementById('#clock');
+//below will refresh function everytime
+setInterval(function () {
+  let d = new Date();
+  console.log(d);
+  clock.innerHTML = d.toLocaleTimeString();
+}, 1000);
+
+```
