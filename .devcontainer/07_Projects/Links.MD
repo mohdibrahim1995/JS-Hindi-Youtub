@@ -91,3 +91,56 @@ setInterval(function () {
 }, 1000);
 
 ```
+
+# project 4
+## its a half code as most of the logic is same
+
+```javascript
+const radomNumber = parseInt(Math.random() * 10 + 1);
+
+const SubmitButton = document.querySelector('#subt');
+const InputFeild = document.querySelector('#guessField');
+const Preguesses = document.querySelector('.guesses');
+const Remaining = document.querySelector('.lastResult');
+const lowOrHi = document.querySelector('.lowOrHi');
+const startOver = document.querySelector('.resultParas');
+const tests = document.querySelector('.tests');
+
+let preGuess = [];
+let numGuess = 1;
+let playGame = true;
+
+if (playGame == true) {
+  SubmitButton.addEventListener('click', function (e) {
+    e.preventDefault();
+    const guess = parseInt(InputFeild.value);
+    //# printing input value on the screens
+    tests.innerText = guess;
+
+    //console.log(tests.value);
+    console.log(guess);
+    setInterval(Validation(guess), 1000);
+  });
+}
+
+function Validation(guess) {
+  if (isNaN(guess) || guess < 0 || guess > 100) {
+    alert(`Please Enter valid number ${guess}`);
+    //return console.log(`Enter numebr is not valide ${guess}`);
+  } else {
+    preGuess.push(guess);
+    tests.innerText = preGuess;
+    console.log(preGuess);
+  }
+}
+
+
+```
+
+
+
+
+
+
+
+
