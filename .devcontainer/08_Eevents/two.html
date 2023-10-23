@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Chai Aur Code</h1>
+    <button id="stop">Stop</button>
+</body>
+<script>
+    //const ChangeText=document.querySelector("h1").innerHTML="Hello world"
+  
+    // document.querySelector("h1").addEventListener('click',
+    // function (){
+    //     console.log("The world is on!")
+    // })
+   const Changes= function(){
+        document.querySelector("h1").innerHTML="Hello world"
+    }
+  
+    
+
+  document.querySelector("#stop").addEventListener("click",function (){
+clearTimeout(checkme)
+console.log("Clicked")
+  })
+  const checkme=setTimeout(Changes,2000)
+  //setTimeout(Changes,2000)
+</script>
+</html>
