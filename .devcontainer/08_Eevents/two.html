@@ -7,6 +7,8 @@
 </head>
 <body>
     <h1>Chai Aur Code</h1>
+    
+    <button id="start">Start</button>
     <button id="stop">Stop</button>
 </body>
 <script>
@@ -19,14 +21,26 @@
    const Changes= function(){
         document.querySelector("h1").innerHTML="Hello world"
     }
-  
-    
+    const checkme=setTimeout(Changes,2000)
+    let dates = Date()
+console.log(dates.toLocaleString())
 
-  document.querySelector("#stop").addEventListener("click",function (){
-clearTimeout(checkme)
-console.log("Clicked")
+
+
+//Start Button 
+document.querySelector("#start").addEventListener("click",function (dates){
+    
+    setInterval(Changes,2000)
+console.log("Start Clicked")
   })
-  const checkme=setTimeout(Changes,2000)
+
+
+//Stop Button
+  document.querySelector("#stop").addEventListener("click",function (){
+clearInterval(checkme)
+console.log("Stop Clicked")
+  })
+
   //setTimeout(Changes,2000)
 </script>
 </html>
