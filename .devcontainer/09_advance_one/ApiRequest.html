@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+<h1 class="UserName"></h1>
+ <img src="" class="image" alt="" style="display:  block;;width: 200px;height: 200px;"/>
+    <p class="Followerss"></p>
+</body>
+<script>
+// const ApiAddress1="https://api.github.com/users/mohdibrahim1995"
+// const XMs=new XMLHttpRequest();
+
+// XMs.open('GET',ApiAddress1);
+// XMs.onreadystatechange = function(){
+//     console.log(XMs.readyState)
+//     if (XMs.readyState===4) {
+//         console.log(this.responseText);
+//     }
+// } 
+// XMs.send()//it need to check state everytime 
+
+//2 Api Calling 
+// const apiAdrees2="https://randomuser.me/api/"
+// const XMl2= new XMLHttpRequest();
+// XMl2.open("GET",apiAdrees2)
+// XMl2.onreadystatechange=function(){
+//     //console.log(XMl2.readyState);
+//     console.log(XMl2.readyState);
+//     if (XMl2.readyState===3) {
+//         console.log(this.responseText)
+//     }
+// }
+// XMl2.send()
+
+//Hitish APi calling 
+const apiAdrees2="https://api.github.com/users/hiteshchoudhary"
+
+const XMl2= new XMLHttpRequest();
+XMl2.open("GET",apiAdrees2)
+XMl2.onreadystatechange=function(){
+   //console.log(XMl2.responseText)
+    if (XMl2.readyState===3) {
+        const Apitests= JSON.parse(this.responseText)   
+       console.log(Apitests.login); 
+       console.log(Apitests.followers); 
+    console.log(Apitests.avatar_url); 
+    img.src=Apitests.avatar_url
+    const images=Apitests.avatar_url
+     img.src=images
+    Follow.innerHTML=Apitests.followers
+    logins.innerHTML=Apitests.login
+    }
+   
+}
+XMl2.send()
+const img=document.querySelector('.image')
+const Follow=document.querySelector('.Followerss')
+const logins=document.querySelector('.UserName')
+
+//img.src='https://avatars.githubusercontent.com/u/11613311?v=4'
+
+</script>
+
+
+
+</html>
